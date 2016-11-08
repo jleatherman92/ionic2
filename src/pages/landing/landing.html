@@ -6,14 +6,14 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Landing</ion-title>
+  <ion-navbar color="secondary">
+    <ion-title text-center>Thomas-Kilmann Conflict Mode Test</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<button ion-button class="button-block" (click)="login()">Log In</button>
-<button ion-button class="button-block" (click)="register()">Register</button>
+<button ion-button block (click)="login()" icon-left><ion-icon name="ios-log-in"></ion-icon>Log In</button>
+<button ion-button block (click)="register()" icon-left><ion-icon name="ios-person-add"></ion-icon>Register</button>
 </ion-content>
