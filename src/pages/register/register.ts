@@ -1,23 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LandingPage } from '../landing/landing';
 
 /*
-  Generated class for the Login page.
+  Generated class for the Register page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html'
+  selector: 'page-register',
+  templateUrl: 'register.html'
 })
-export class LoginPage {
+export class RegisterPage {
 
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello LoginPage Page');
+    console.log('Hello RegisterPage Page');
   }
 
 }
