@@ -3,6 +3,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LandingPage } from '../pages/landing/landing';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { NavController } from 'ionic-angular';
 //import { AboutPage } from '../pages/about/about';
 //import { ContactPage } from '../pages/contact/contact';
@@ -13,7 +14,8 @@ import { NavController } from 'ionic-angular';
   declarations: [
     MyApp,
     LandingPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
     // AboutPage,
     // ContactPage,
     // HomePage,
@@ -26,7 +28,8 @@ import { NavController } from 'ionic-angular';
   entryComponents: [
     MyApp,
     LandingPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
     // AboutPage,
     // ContactPage,
     // HomePage,
