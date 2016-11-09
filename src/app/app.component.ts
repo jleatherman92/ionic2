@@ -6,6 +6,8 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { NavController } from 'ionic-angular';
 import { LobbyPage } from '../pages/lobby/lobby';
+import { QuestionsPage } from '../pages/questions/questions';
+import { ResultsPage } from '../pages/results/results';
 
 //import { TabsPage } from '../pages/tabs/tabs';
 

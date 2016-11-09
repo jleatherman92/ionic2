@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { QuestionsPage } from '../questions/questions';
+import { ResultsPage } from '../results/results';
+import { LandingPage } from '../landing/landing';
+
+
 // import { RegisterPage } from '../register/register';
 
 /*
@@ -21,5 +26,13 @@ export class LobbyPage {
   ionViewDidLoad() {
     console.log('Hello LobbyPage Page');
   }
-
+takeTest() {
+  this.navCtrl.push(QuestionsPage);
+}
+results() {
+  this.navCtrl.push(ResultsPage);
+}
+logout(){
+  this.navCtrl.push(LandingPage);
+}
 }

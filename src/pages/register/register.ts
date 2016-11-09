@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { LobbyPage } from '../lobby/lobby';
 // import { RegisterPage } from '../register/register';
 
 /*
@@ -18,13 +18,18 @@ export class RegisterPage {
   constructor(public navCtrl: NavController) {
     this.navCtrl = navCtrl;
   }
+  
+  user = {}
 
   ionViewDidLoad() {
     console.log('Hello RegisterPage Page');
   }
   
-  //     login() {
-  //   this.navCtrl.push(lobbyPage);
-  // }
+  register() {
+  this.navCtrl.push(LobbyPage);
+}
 
+    signupForm = function(form) { 
+        if(form.invalid) return alert("Please complete the form before proceeding.");
+}
 }

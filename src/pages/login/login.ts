@@ -29,5 +29,9 @@ export class LoginPage {
       console.log("some stuff");
     this.navCtrl.push(LobbyPage);
   }
+  
+      signupForm = function(form) { 
+        if(form.invalid) return alert("Please complete the form before proceeding.");
+}
 
 }

@@ -6,13 +6,18 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Lobby</ion-title>
+  <ion-navbar color="secondary">
+    <ion-title text-center>Lobby</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  
+<button ion-button block (click)="takeTest()" icon-left><ion-icon name="ios-create"></ion-icon>Take Test</button>
+<button ion-button block (click)="results()" icon-left><ion-icon name="ios-podium"></ion-icon>Results</button>
+<button ion-button block (click)="logout()" icon-left><ion-icon name="ios-log-out"></ion-icon>Logout</button>
+
 
 </ion-content>

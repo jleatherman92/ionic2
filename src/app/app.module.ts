@@ -6,6 +6,8 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { NavController } from 'ionic-angular';
 import { LobbyPage } from '../pages/lobby/lobby';
+import { QuestionsPage } from '../pages/questions/questions';
+import { ResultsPage } from '../pages/results/results';
 //import { AboutPage } from '../pages/about/about';
 //import { ContactPage } from '../pages/contact/contact';
 //import { HomePage } from '../pages/home/home';
@@ -17,7 +19,9 @@ import { LobbyPage } from '../pages/lobby/lobby';
     LandingPage,
     LoginPage,
     RegisterPage,
-    LobbyPage
+    LobbyPage,
+    QuestionsPage,
+    ResultsPage
     // AboutPage,
     // ContactPage,
     // HomePage,
@@ -32,7 +36,9 @@ import { LobbyPage } from '../pages/lobby/lobby';
     LandingPage,
     LoginPage,
     RegisterPage,
-    LobbyPage
+    LobbyPage,
+    QuestionsPage,
+    ResultsPage
     // AboutPage,
     // ContactPage,
     // HomePage,
