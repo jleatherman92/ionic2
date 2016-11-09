@@ -30,5 +30,7 @@ export class LandingPage {
   register() {
     this.navCtrl.push(RegisterPage);
   }
+  
+  
 
 }
