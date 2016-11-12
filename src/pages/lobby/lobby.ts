@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
 import { QuestionsPage } from '../questions/questions';
 import { ResultsPage } from '../results/results';
 import { LandingPage } from '../landing/landing';

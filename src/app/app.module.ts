@@ -1,20 +1,30 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
+
+//states
 import { LandingPage } from '../pages/landing/landing';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
-import { NavController } from 'ionic-angular';
 import { LobbyPage } from '../pages/lobby/lobby';
 import { QuestionsPage } from '../pages/questions/questions';
 import { ResultsPage } from '../pages/results/results';
+
+//rest services
+import { RestSSFUsers } from '../providers/rest-ssf-users';
+
+
+// import { Http } from '@angular/http';
+// import { NavController } from 'ionic-angular';
+
+
+//import { QuestionsDataService } from '../providers/questions.service';
 //import { AboutPage } from '../pages/about/about';
 //import { ContactPage } from '../pages/contact/contact';
 //import { HomePage } from '../pages/home/home';
 //import { TabsPage } from '../pages/tabs/tabs';
 
-@NgModule({
-  declarations: [
+const injections = [
     MyApp,
     LandingPage,
     LoginPage,
@@ -22,28 +32,18 @@ import { ResultsPage } from '../pages/results/results';
     LobbyPage,
     QuestionsPage,
     ResultsPage
-    // AboutPage,
-    // ContactPage,
-    // HomePage,
-    // //TabsPage
-  ],
+  ]
+
+
+@NgModule({
+  declarations: injections, 
+  
   imports: [
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    LandingPage,
-    LoginPage,
-    RegisterPage,
-    LobbyPage,
-    QuestionsPage,
-    ResultsPage
-    // AboutPage,
-    // ContactPage,
-    // HomePage,
-    // TabsPage
-  ],
-  providers: []
+  entryComponents: injections,
+  providers: [RestSSFUsers
+    ]
 })
 export class AppModule {}

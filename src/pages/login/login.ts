@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LobbyPage } from '../lobby/lobby';
+import { RestSSFUsers } from '../../providers/rest-ssf-users';
+
 
 
 /*
@@ -15,23 +17,42 @@ import { LobbyPage } from '../lobby/lobby';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController) {
-    this.navCtrl = navCtrl;
-  }
-  
-  user = {}
+  constructor(public navCtrl: NavController, 
+              public SSFUsersRest: RestSSFUsers) {}
 
   ionViewDidLoad() {
     console.log('Hello LoginPage Page');
   }
   
-    login() {
-      console.log("some stuff");
-    this.navCtrl.push(LobbyPage);
-  }
+  user = {
+      email: "joedoe@aol.com",
+      password: "password"
+  };
   
-      signupForm = function(form) { 
-        if(form.invalid) return alert("Please complete the form before proceeding.");
+   login(form) {
+    if(form.invalid) 
+      return alert("Please fill in all of the required fields.");
+
+    this.SSFUsersRest.login(this.user)
+    .map(res => res.json())
+    .subscribe(res => {
+      window.localStorage.setItem('token', res.id);
+      window.localStorage.setItem('userId', res.userId);
+      this.navCtrl.setRoot(LobbyPage);
+    }, err => {
+      alert("Incorrect login");
+    });
+  }
 }
 
-}
+  
+//     login() {
+//       console.log("some stuff");
+//     this.navCtrl.push(LobbyPage);
+//   }
+  
+//       signupForm = function(form) { 
+//         if(form.invalid) return alert("Please complete the form before proceeding.");
+// }
+
+// }

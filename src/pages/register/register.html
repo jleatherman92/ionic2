@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <form #registerForm="ngForm" (ngSubmit)="register()">
+  <form #registerForm="ngForm" (ngSubmit)="register()" novalidate>
   <ion-list>
 
   <ion-item>
@@ -30,11 +30,11 @@
   </ion-item>
   
   <ion-item>
-    <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+    <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="email" required></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="password" required></ion-input>
   </ion-item>
 
 </ion-list>

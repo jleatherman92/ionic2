@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { QuestionsDataService } from '../providers/questions.service';
 
 /*
   Generated class for the Questions page.
@@ -14,6 +15,11 @@ import { NavController } from 'ionic-angular';
 export class QuestionsPage {
 
   constructor(public navCtrl: NavController) {}
+  
+//   ngOnInit() {
+//     this.QuestionsDataService.getQuestions()
+//       .subscribe(questions => this.questions = questions);
+// }
 
   ionViewDidLoad() {
     console.log('Hello QuestionsPage Page');

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
+import { LobbyPage } from '../lobby/lobby';
 
 /*
   Generated class for the Landing page.

@@ -5,11 +5,14 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color="secondary">
     <ion-title text-center>Lobby</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logoutApp()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -17,7 +20,7 @@
   
 <button ion-button block (click)="takeTest()" icon-left><ion-icon name="ios-create"></ion-icon>Take Test</button>
 <button ion-button block (click)="results()" icon-left><ion-icon name="ios-podium"></ion-icon>Results</button>
-<button ion-button block (click)="logout()" icon-left><ion-icon name="ios-log-out"></ion-icon>Logout</button>
+
 
 
 </ion-content>
