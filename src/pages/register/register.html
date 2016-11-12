@@ -14,27 +14,27 @@
 
 
 <ion-content padding>
-  <form #registerForm="ngForm" (ngSubmit)="register()" novalidate>
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)" novalidate>
   <ion-list>
 
   <ion-item>
-    <ion-input name="firstName" type="text" placeholder="First Name" [(ngModel)]="firstName"></ion-input>
+    <ion-input name="firstName" type="text" placeholder="First Name" [(ngModel)]="user.firstName" required></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input name="lastName" type="text" placeholder="Last Name" [(ngModel)]="lastName"></ion-input>
+    <ion-input name="lastName" type="text" placeholder="Last Name" [(ngModel)]="user.lastName" required></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-input name="organization" type="text" placeholder="Organization" [(ngModel)]="organization"></ion-input>
+    <ion-input name="organization" type="text" placeholder="Organization" [(ngModel)]="user.organization"></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="email" required></ion-input>
+    <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="user.email" required></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="password" required></ion-input>
+    <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="user.password" required></ion-input>
   </ion-item>
 
 </ion-list>

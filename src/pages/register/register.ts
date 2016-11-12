@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LobbyPage } from '../lobby/lobby';
+import { RestSSFUsers } from '../../providers/rest-ssf-users';
 // import { RegisterPage } from '../register/register';
 
 /*
@@ -15,21 +16,37 @@ import { LobbyPage } from '../lobby/lobby';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController) {
-    this.navCtrl = navCtrl;
-  }
+  constructor(public navCtrl: NavController,
+              public SSFUsersRest: RestSSFUsers) {}
   
-  user = {}
-
   ionViewDidLoad() {
     console.log('Hello RegisterPage Page');
   }
   
-  register() {
-  this.navCtrl.push(LobbyPage);
-}
+    user = {};
+    
+    register(form) {
+      if(form.invalid) 
+        return alert("Please fill in all of the required fields.");
+    
+    this.SSFUsersRest.register(this.user)
+    .map(res => res.json())
+    .subscribe(res => {
+      window.localStorage.setItem('token', res.token);
+      window.localStorage.setItem('userId', res.id);
+      this.navCtrl.setRoot(LobbyPage);
+    }, err => {
+      alert("Please complete the form before proceeding.");
+    });
+  }
 
-    signupForm = function(form) { 
-        if(form.invalid) return alert("Please complete the form before proceeding.");
 }
-}
+  
+//   register() {
+//   this.navCtrl.push(LobbyPage);
+// }
+
+//     signupForm = function(form) { 
+//         if(form.invalid) return alert("Please complete the form before proceeding.");
+// }
+// }
